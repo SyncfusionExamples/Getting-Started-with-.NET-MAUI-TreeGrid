@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GettingStarted.MainPage"
+             xmlns:local="clr-namespace:GettingStarted"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeGrid;assembly=Syncfusion.Maui.TreeGrid">
+
+    <ContentPage.BindingContext>
+        <local:EmployeeInfoViewModel/>
+    </ContentPage.BindingContext>
+    
+    <syncfusion:SfTreeGrid x:Name="treeGrid"
+                       ItemsSource="{Binding PersonDetails}"
+                       ChildPropertyName="Children"
+                       AutoExpandMode="RootNodesExpanded"
+                       ExpanderColumn="FirstName">
+
+    </syncfusion:SfTreeGrid>
+</ContentPage>
